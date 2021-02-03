@@ -16,6 +16,8 @@ print(top_100[-1])
 top_100[-1] = "1) " + top_100[-1]
 print(top_100[-1])
 
+top_100 = top_100[::-1]
+
 with open('top100Movies.txt', 'w') as file:
     for movie in top_100:
         file.write("{}\n".format(movie.encode("utf-8")))
